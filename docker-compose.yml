@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  identity:
+    build: './identity-service'
+    ports:
+      - "3000:3000"
+
+  trading:
+    build: './trading-service'
+    ports:
+      - "3005:3005"
+
+  api-gateway:
+    build: './api-gateway'
+    ports:
+      - "3003:3003"
